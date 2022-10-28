@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1",
+    "sass": "^1.54.0"
+  },
+  "scripts": {
+    "getSass": "sass assets/scss/:assets/css/ --watch --style compressed"
+  }
+}

@@ -1,0 +1,88 @@
+.icon {
+    &-dot {
+        position: relative;
+        display: inline-block;
+        @include vw-mo(width, 3);
+        @include vw-mo(height, 16);
+        @include vw-mo(margin, 0 5);
+        vertical-align: middle;
+        background-size: contain;
+
+        &:before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: '';
+            background-color: #333;
+            border-radius: 50%;
+            width: 3px;
+            height: 3px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &-tel {
+        display: inline-block;
+        @include vw-mo(width, 16);
+        @include vw-mo(height, 16);
+        background: url('../images/icon/icon_phone.svg') no-repeat;
+        font-size: 0;
+        vertical-align: middle;
+        background-size: contain;
+    }
+
+    &-arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include vw-mo(right, 20);
+        display: inline-block;
+        @include vw-mo(width, 16);
+        @include vw-mo(height, 16);
+        background: url('../images/icon/icon_arrow.svg') no-repeat;
+        font-size: 0;
+        vertical-align: middle;
+        &--active {
+            transform: rotate(180deg);
+        }
+    }
+
+    &-kakao {
+        display: inline-block;
+        @include vw-mo(width, 22);
+        @include vw-mo(height, 20);
+        background: url('../images/icon/icon_kakao.svg') no-repeat;
+        font-size: 0;
+        vertical-align: middle;
+    }
+    &-share {
+        display: inline-block;
+        @include vw-mo(width, 20);
+        @include vw-mo(height, 20);
+        background: url('../images/icon/icon_share.svg') no-repeat;
+        font-size: 0;
+        vertical-align: middle;
+    }
+    &-close {
+        display: inline-block;
+        @include vw-mo(width, 50);
+        @include vw-mo(height, 50);
+        background: url('../images/icon/icon_close.svg') no-repeat;
+        @include vw-mo(background-size, 12 12);
+        font-size: 0;
+        vertical-align: middle;
+        background-position: center right;
+    }
+    &-message {
+        display: inline-block;
+        @include vw-mo(width, 16);
+        @include vw-mo(height, 16);
+        @include vw-mo(margin-left, 20);
+        background: url('../images/icon/icon_message.svg') no-repeat;
+        font-size: 0;
+        vertical-align: middle;
+        background-size: contain;
+        background-position: center;
+    }
+}

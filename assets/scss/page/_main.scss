@@ -1,0 +1,452 @@
+.pungPang {
+    max-width: 720px;
+    margin: 0 auto;
+}
+.main {
+    &-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    &-visual {
+        position: relative;
+        width: 100%;
+        @include vw-mo(height, 566);
+        background: url('../images/img_main.png') no-repeat;
+        background-size: auto 100%;
+        background-position: center;
+        &__title {
+            position: absolute;
+            display: block;
+            width: 100%;
+            @include vw-mo(top, 215);
+            left: 0;
+            font-family: 'Alata', sans-serif;
+            text-align: center;
+            @include vw-font-size-mo(26);
+            color: #333;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        &__name {
+            position: absolute;
+            display: block;
+            width: 100%;
+            @include vw-mo(top, 325);
+            left: 0;
+            font-weight: 500;
+            text-align: center;
+            @include vw-font-size-mo(16);
+            &--small {
+                display: inline-block;
+                @include vw-mo(padding, 0 5);
+                @include vw-font-size-mo(12);
+                font-weight: normal;
+            }
+        }
+
+        &__date {
+            position: absolute;
+            @include vw-mo(bottom, 20);
+            display: block;
+            width: 100%;
+            font-weight: 500;
+            text-align: center;
+            @include vw-font-size-mo(16);
+            font-weight: 300;
+        }
+
+        &__btn {
+            position: absolute;
+            display: block;
+            @include vw-mo(top, 20);
+            @include vw-mo(right, 20);
+            padding: 0;
+            font-size: 0;
+        }
+
+    }
+
+    &-desc {
+        @include vw-mo(padding, 60 0);
+        text-align: center;
+        font-size:14px;
+        @include vw-mo(line-height, 20);
+    }
+
+    &-bg {
+        position: relative;
+        @include vw-mo(height, 300);
+        @include vw-mo(margin-top, 60);
+        @include vw-mo(padding-top, 50);
+
+        &__inner {
+            clip: rect(0,auto,auto,0);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &__image{
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/gallery/studio05.png') no-repeat;
+            background-size: cover;
+            background-position: center center;
+            transform: translateZ(0);
+            will-change: transform;
+
+        }
+    }
+
+    &-tel {
+        @include vw-mo(margin-top, 60);
+        @include vw-mo(padding, 0 30);
+
+        &__item {
+            text-align: center;
+            font-size:16px;
+            white-space: nowrap;
+            line-height: 1;
+            &+& {
+                @include vw-mo(margin-top, 20);
+            }
+
+            &--small {
+                display: inline-block;
+                @include vw-mo(margin-left, 25);
+                @include vw-mo(margin-right, 4);
+                font-size:12px;
+                color: #666;
+            }
+            &--icon {
+                @include vw-mo(margin-left, 20);
+            }
+        }
+
+        &__button {
+            @include vw-mo(margin-top, 40);
+            border: 1px solid #333;
+            text-align: center;
+            @include vw-mo(padding, 18 0);
+            font-size:16px;
+        }
+    }
+
+    &-swipe {
+        position: relative;
+        @include vw-mo(margin-top, 80);
+
+        .slick-arrow {
+            display: inline-block;
+            @include vw-mo(width, 24);
+            @include vw-mo(height, 24);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            font-size: 0;
+        }
+        .slick-prev {
+            @include vw-mo(left, 10);
+            background: url('../images/icon/icon_prev.svg') no-repeat;
+        }
+        .slick-next {
+            @include vw-mo(right, 10);
+            background: url('../images/icon/icon_next.svg') no-repeat;
+        }
+        .slick-counter {
+            position: absolute;
+            @include vw-mo(top, 20);
+            @include vw-mo(right, 20);
+            font-size:12px;
+        }
+    }
+
+    &-gallery {
+        &-half {
+            font-size: 0;
+            img {
+                display: inline-block;
+                width: 50%;
+            }
+        }
+        &-three {
+            font-size: 0;
+            img {
+                display: inline-block;
+                width: 33.3%;
+            }
+        }
+        &-four {
+            font-size: 0;
+            img {
+                display: inline-block;
+                width: 25%;
+            }
+        }
+    }
+
+    &-single {
+        &-photo {
+            font-size: 0;
+        }
+    }
+
+    &-date {
+        @include vw-mo(margin-top, 99);
+        @include vw-mo(padding, 20 0);
+        background-color: #F3F8FF;
+        text-align: center;
+        font-size:20px;
+
+        &__title {
+            &-icon {
+                margin: 0 auto;
+                @include vw-mo(margin-bottom, 5);
+                @include vw-mo(width, 60);
+                @include vw-mo(height, 20);
+            }
+        }
+
+        &__dday {
+            @include vw-mo(margin-top, 16);
+            font-size:24px;
+        }
+    }
+
+    &-calendar {
+        @include vw-mo(margin-top, 60);
+        @include vw-mo(padding, 0 30);
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &-location {
+        &__title {
+            @include vw-mo(margin-top, 80);
+        }
+
+        &__desc {
+            @include vw-mo(margin-top, 20);
+            text-align: center;
+            color: #333;
+            font-size:16px;
+            @include vw-mo(line-height, 24);
+
+            &--photo {
+                @include vw-mo(margin-top, 20);
+                font-size:14px;
+                @include vw-mo(line-height, 24);
+                text-align: center;
+
+                img {
+                    transform: scale(1.2);
+                }
+            }
+
+        }
+        &__map {
+            @include vw-mo(margin-top, 40);
+        }
+
+        &__btn{
+            @include vw-mo(margin-top, 20);
+            @include vw-mo(padding, 0 30);
+
+            &--underline {
+                position: relative;
+                font-size:14px;
+
+                &+& {
+                    @include vw-mo(margin-left, 10);
+                }
+
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #333;
+                    content: '';
+                }
+            }
+        }
+
+        &__trans {
+            @include vw-mo(margin-top, 30);
+            @include vw-mo(padding, 0 30);
+            &+& {
+                @include vw-mo(margin-top, 20);
+            }
+
+            &-title {
+                font-size:16px;
+                font-weight: 500;
+            }
+            &-desc {
+                @include vw-mo(margin-top, 8);
+                font-size:14px;
+                @include vw-mo(line-height,24);
+                &+& {
+                    margin-top: 0;
+                }
+            }
+        }
+
+    }
+
+    &-thx {
+        @include vw-mo(padding, 0 30);
+        &__title {
+            @include vw-mo(margin-top, 80);
+        }
+
+        &__box {
+            @include vw-mo(margin-top, 30);
+            border: 1px solid #999;
+            &+& {
+                @include vw-mo(margin-top, 10);
+            }
+
+            &--active {
+                border-color: #333;
+            }
+            &-title {
+                position: relative;
+                @include vw-mo(padding, 16 20);
+                font-size:16px;
+                font-weight: 500;
+                line-height: 1;
+            }
+            &-desc {
+                position: relative;
+                @include vw-mo(padding, 8 20);
+                @include vw-mo(line-height, 18);
+                font-size:14px;
+            }
+            &-copy {
+                position: absolute;
+                top: 50%;
+                @include vw-mo(right, 20);
+                padding: 0;
+                transform: translateY(-50%);
+                font-size:12px;
+                &:after {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #333;
+                    content: '';
+                }
+            }
+            &-bank {
+               display: none;
+
+                &--active {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &-copy {
+        @include vw-mo(margin, 60 0 120);
+        text-align: center;
+        font-size:16px;
+        color:#333;
+        &__item {
+            &+& {
+                @include vw-mo(margin-top, 20);
+            }
+        }
+    }
+
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    z-index: 11;
+    overflow: hidden;
+    
+    &-wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include vw-mo(width, 300);
+        background-color: #fff;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+    }
+
+    &-title {
+        position: relative;
+        @include vw-mo(padding, 18 0);
+        text-align: center;
+        font-size:16px;
+        font-weight: 500;
+        background-color: #F3F8FF;
+        line-height: 1;
+
+        &__close {
+            position: absolute;
+            top: 50%;
+            @include vw-mo(right, 20);
+            transform: translateY(-50%);
+        }
+    }
+
+    &-contents {
+        @include vw-mo(padding, 0 20 20);
+        &__item {
+            &-title {
+                @include vw-mo(padding, 20 0);
+                font-size:16px;
+                font-weight: 500;
+                color: #333;
+            }
+            &-desc {
+                position: relative;
+                font-size:16px;
+                color: #333;
+                &+& {
+                    @include vw-mo(margin-top, 12);
+                }
+            }
+            &-icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+
+    &-dimd {
+        position: absolute;
+        left: 0;
+        top:0;
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        opacity: .5;
+    }
+}

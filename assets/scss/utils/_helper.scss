@@ -1,0 +1,43 @@
+.hide {
+    &-pc {
+        display: none;
+    }
+    &-mob {
+        display: block;
+    }
+}
+
+.show {
+    &-mob {
+        display: none;
+    }
+    &-pc {
+        display: block;
+    }
+}
+
+.font {
+    &-green {
+        color:$neon;
+    }
+}
+
+@include breakpoint(mobile) {
+    .hide {
+        &-pc {
+            display: block;
+        }
+        &-mob {
+            display: none;
+        }
+    }
+
+    .show {
+        &-mob {
+            display: block;
+        }
+        &-pc {
+            display: none;
+        }
+    }
+}
